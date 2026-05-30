@@ -1,6 +1,6 @@
 {
 	"name": "eslint-plugin-max-properties-per-class",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "ESLint rules capping the number of methods and properties in classes and interfaces (JS + TS).",
 	"type": "module",
 	"license": "MIT",
