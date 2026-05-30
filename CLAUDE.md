@@ -8,7 +8,14 @@ reference (options, defaults, and what counts as a method vs a property).
 
 ## Working in this repo
 
-- Source: `index.mjs` (plugin object), `rules/`, `lib/count-members.mjs`.
-- Tests: `npm test` runs the `RuleTester` suites in `tests/`.
-- Lint: `npm run lint` (the package dogfoods its own base config).
-- Both must be green before a commit.
+- Written in TypeScript under `src/` (`index.ts` plugin object, `rules/`,
+  `lib/count-members.ts`); typed via `@typescript-eslint/utils` (`TSESTree`,
+  `RuleModule`).
+- Build: `npm run build` (tsdown → dual ESM+CJS + `.d.ts` in `dist/`). `dist/`
+  is git-ignored and only produced for publishing.
+- Tests: `npm test` runs the `RuleTester` suites against `src/` via `tsx`
+  (no build needed for the test loop).
+- Typecheck: `npm run typecheck` (`tsc --noEmit`).
+- Lint: `npm run lint` (dogfoods `typescript-eslint` on the source).
+- All of typecheck, test, and lint must be green before a commit;
+  `prepublishOnly` runs build + test.

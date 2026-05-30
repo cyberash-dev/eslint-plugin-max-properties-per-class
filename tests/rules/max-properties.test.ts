@@ -1,21 +1,12 @@
-import { RuleTester } from "eslint";
-import tseslint from "typescript-eslint";
+import { getRule, ruleTester } from "../rule-tester";
 
-import rule from "../../rules/max-properties.mjs";
+const rule = getRule("max-properties");
 
-const ruleTester = new RuleTester({
-	languageOptions: {
-		parser: tseslint.parser,
-		ecmaVersion: "latest",
-		sourceType: "module",
-	},
-});
-
-function props(count) {
+function props(count: number): string {
 	return Array.from({ length: count }, (_, i) => `  p${i} = 0;`).join("\n");
 }
 
-function classWith(count, extra) {
+function classWith(count: number, extra: string): string {
 	return `class C {\n${props(count)}\n${extra}\n}`;
 }
 
