@@ -1,0 +1,51 @@
+{
+	"name": "eslint-plugin-cyberash",
+	"version": "1.0.0",
+	"description": "ESLint rules capping the number of methods and properties in classes and interfaces (JS + TS).",
+	"type": "module",
+	"license": "MIT",
+	"author": "cyberash-dev <cyberash-dev@yandex.com>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cyberash-dev/eslint-plugin-max-properties-per-class.git"
+	},
+	"bugs": {
+		"url": "https://github.com/cyberash-dev/eslint-plugin-max-properties-per-class/issues"
+	},
+	"homepage": "https://github.com/cyberash-dev/eslint-plugin-max-properties-per-class#readme",
+	"keywords": [
+		"eslint",
+		"eslint-plugin",
+		"max-methods",
+		"max-properties",
+		"class",
+		"interface",
+		"typescript"
+	],
+	"exports": {
+		".": "./eslint-plugin/index.mjs",
+		"./base": "./eslint.base.mjs"
+	},
+	"files": [
+		"eslint-plugin",
+		"eslint.base.mjs",
+		"AGENTS.md"
+	],
+	"scripts": {
+		"test": "node tests/run-all.mjs",
+		"lint": "eslint .",
+		"prepublishOnly": "npm test"
+	},
+	"peerDependencies": {
+		"eslint": ">=9"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.16.0",
+		"eslint": "^9.16.0",
+		"globals": "^15.13.0",
+		"typescript-eslint": "^8.18.0"
+	},
+	"engines": {
+		"node": ">=20"
+	}
+}
