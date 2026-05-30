@@ -1,5 +1,7 @@
 # eslint-plugin-max-properties-per-class
 
+**English** | [Русский](README.ru.md)
+
 Two ESLint rules that cap how many **methods** and **properties** a class or
 interface may declare. Works on JavaScript classes, TypeScript classes, and
 TypeScript interfaces (a class and the interface it implements are counted the
