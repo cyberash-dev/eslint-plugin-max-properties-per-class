@@ -15,10 +15,10 @@ const plugin: TSESLint.FlatConfig.Plugin = {
 };
 
 configs.recommended = {
-	plugins: { cyberash: plugin },
+	plugins: { "max-properties-per-class": plugin },
 	rules: {
-		"cyberash/max-methods": ["error", { max: 10 }],
-		"cyberash/max-properties": ["error", { max: 15 }],
+		"max-properties-per-class/max-methods": ["error", { max: 10 }],
+		"max-properties-per-class/max-properties": ["error", { max: 15 }],
 	},
 };
 

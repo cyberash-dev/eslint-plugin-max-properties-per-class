@@ -3,7 +3,7 @@
 This file points AI agents at the canonical guidance for this repo.
 
 See [AGENTS.md](./AGENTS.md) for how to adopt and configure
-`eslint-plugin-cyberash`, and [README.md](./README.md) for the full rule
+`eslint-plugin-max-properties-per-class`, and [README.md](./README.md) for the full rule
 reference (options, defaults, and what counts as a method vs a property).
 
 ## Working in this repo

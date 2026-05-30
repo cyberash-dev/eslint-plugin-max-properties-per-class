@@ -1,5 +1,5 @@
 {
-	"name": "eslint-plugin-cyberash",
+	"name": "eslint-plugin-max-properties-per-class",
 	"version": "1.0.0",
 	"description": "ESLint rules capping the number of methods and properties in classes and interfaces (JS + TS).",
 	"type": "module",

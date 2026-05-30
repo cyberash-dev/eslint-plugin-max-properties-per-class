@@ -1,18 +1,18 @@
-# AGENTS.md — adopting eslint-plugin-cyberash
+# AGENTS.md — adopting eslint-plugin-max-properties-per-class
 
 Two ESLint 9 (flat-config) rules capping members per class/interface:
 
-- `cyberash/max-methods` — methods (default `max` 10).
-- `cyberash/max-properties` — properties (default `max` 15).
+- `max-properties-per-class/max-methods` — methods (default `max` 10).
+- `max-properties-per-class/max-properties` — properties (default `max` 15).
 
 ## Adopt in a repo
 
-1. `npm install --save-dev eslint-plugin-cyberash`.
+1. `npm install --save-dev eslint-plugin-max-properties-per-class`.
 2. In `eslint.config.mjs`, either register the plugin and enable the rules
    explicitly, or use the bundled `recommended` config:
 
    ```js
-   import cyberash from "eslint-plugin-cyberash";
+   import cyberash from "eslint-plugin-max-properties-per-class";
    export default [cyberash.configs.recommended];
    ```
 

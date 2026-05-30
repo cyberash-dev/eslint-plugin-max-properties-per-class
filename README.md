@@ -1,12 +1,12 @@
-# eslint-plugin-cyberash
+# eslint-plugin-max-properties-per-class
 
 Two ESLint rules that cap how many **methods** and **properties** a class or
 interface may declare. Works on JavaScript classes, TypeScript classes, and
 TypeScript interfaces (a class and the interface it implements are counted the
 same way). ESLint 9 flat config only.
 
-- `cyberash/max-methods` — caps methods.
-- `cyberash/max-properties` — caps properties.
+- `max-properties-per-class/max-methods` — caps methods.
+- `max-properties-per-class/max-properties` — caps properties.
 
 Each declaration is counted from its **own** body, so a nested class is counted
 independently of the class that encloses it. The constructor is never counted.
@@ -14,7 +14,7 @@ independently of the class that encloses it. The constructor is never counted.
 ## Install
 
 ```sh
-npm install --save-dev eslint-plugin-cyberash
+npm install --save-dev eslint-plugin-max-properties-per-class
 ```
 
 `eslint` (>=9) is a peer dependency.
@@ -25,14 +25,14 @@ Wire the plugin into your flat config and turn the rules on:
 
 ```js
 // eslint.config.mjs
-import cyberash from "eslint-plugin-cyberash";
+import cyberash from "eslint-plugin-max-properties-per-class";
 
 export default [
 	{
-		plugins: { cyberash },
+		plugins: { "max-properties-per-class": cyberash },
 		rules: {
-			"cyberash/max-methods": ["error", { max: 10 }],
-			"cyberash/max-properties": ["error", { max: 15 }],
+			"max-properties-per-class/max-methods": ["error", { max: 10 }],
+			"max-properties-per-class/max-properties": ["error", { max: 15 }],
 		},
 	},
 ];
@@ -42,7 +42,7 @@ Or use the bundled `recommended` config, which enables both at `error` with the
 defaults above:
 
 ```js
-import cyberash from "eslint-plugin-cyberash";
+import cyberash from "eslint-plugin-max-properties-per-class";
 
 export default [cyberash.configs.recommended];
 ```
@@ -52,8 +52,8 @@ export default [cyberash.configs.recommended];
 Each rule takes either a number shorthand or an options object:
 
 ```js
-"cyberash/max-methods": ["error", 10]
-"cyberash/max-methods": ["error", { max: 10, includePrivate: true }]
+"max-properties-per-class/max-methods": ["error", 10]
+"max-properties-per-class/max-methods": ["error", { max: 10, includePrivate: true }]
 ```
 
 | Option | Type | Default | Rules | Meaning |
