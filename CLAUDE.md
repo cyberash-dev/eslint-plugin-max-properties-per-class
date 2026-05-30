@@ -8,7 +8,7 @@ reference (options, defaults, and what counts as a method vs a property).
 
 ## Working in this repo
 
-- Source: `eslint-plugin/` (`index.mjs`, `rules/`, `lib/count-members.mjs`).
+- Source: `index.mjs` (plugin object), `rules/`, `lib/count-members.mjs`.
 - Tests: `npm test` runs the `RuleTester` suites in `tests/`.
 - Lint: `npm run lint` (the package dogfoods its own base config).
 - Both must be green before a commit.

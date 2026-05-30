@@ -1,7 +1,7 @@
 import { RuleTester } from "eslint";
 import tseslint from "typescript-eslint";
 
-import rule from "../../eslint-plugin/rules/max-methods.mjs";
+import rule from "../../rules/max-methods.mjs";
 
 const ruleTester = new RuleTester({
 	languageOptions: {

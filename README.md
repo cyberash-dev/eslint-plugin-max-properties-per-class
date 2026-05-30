@@ -38,13 +38,13 @@ export default [
 ];
 ```
 
-Or spread the bundled base config, which enables both at `error` with the
+Or use the bundled `recommended` config, which enables both at `error` with the
 defaults above:
 
 ```js
-import base from "eslint-plugin-cyberash/base";
+import cyberash from "eslint-plugin-cyberash";
 
-export default [...base];
+export default [cyberash.configs.recommended];
 ```
 
 ## Options

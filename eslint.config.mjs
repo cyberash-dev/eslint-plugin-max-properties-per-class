@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import globals from "globals";
-import base from "./eslint.base.mjs";
+
+import cyberash from "./index.mjs";
 
 export default [
 	js.configs.recommended,
@@ -11,5 +12,5 @@ export default [
 			globals: { ...globals.node },
 		},
 	},
-	...base,
+	cyberash.configs.recommended,
 ];

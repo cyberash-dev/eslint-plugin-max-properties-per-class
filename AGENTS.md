@@ -9,14 +9,14 @@ Two ESLint 9 (flat-config) rules capping members per class/interface:
 
 1. `npm install --save-dev eslint-plugin-cyberash`.
 2. In `eslint.config.mjs`, either register the plugin and enable the rules
-   explicitly, or spread the bundled base:
+   explicitly, or use the bundled `recommended` config:
 
    ```js
-   import base from "eslint-plugin-cyberash/base";
-   export default [...base];
+   import cyberash from "eslint-plugin-cyberash";
+   export default [cyberash.configs.recommended];
    ```
 
-   The base config turns **both rules on at `error`** with the defaults.
+   The `recommended` config turns **both rules on at `error`** with the defaults.
 
 ## Rule behavior an agent must know
 

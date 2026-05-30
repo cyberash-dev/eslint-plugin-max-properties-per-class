@@ -22,13 +22,14 @@
 		"interface",
 		"typescript"
 	],
+	"main": "./index.mjs",
 	"exports": {
-		".": "./eslint-plugin/index.mjs",
-		"./base": "./eslint.base.mjs"
+		".": "./index.mjs"
 	},
 	"files": [
-		"eslint-plugin",
-		"eslint.base.mjs",
+		"index.mjs",
+		"rules",
+		"lib",
 		"AGENTS.md"
 	],
 	"scripts": {
